@@ -35,18 +35,20 @@
             </div>
 
             <mat-form-field class="multi-select-dd">
-                <!-- <mat-label> <img src="../../assets/images/icon-location.svg" alt=""> I’m travelling to</mat-label> -->
                 <mat-select [(ngModel)]="selectedOptions" multiple [disableOptionCentering]="true" mat-select-filter
                     placeholder="I’m travelling to">
-                    <input type="text" class="ms-filter" autocomplete="off" matInput placeholder="Search"
+                    <input type="text" placeholder="Search" class="ms-filter" autocomplete="off" matInput placeholder="Search"
                         #multiSelectSearch (input)="onInputChange()">
                     <mat-select-trigger>
+                        <span class="place-holder"> I’m travelling to</span>
                         {{ selectedOptions.length ? selectedOptions.join(', ') : 'Select Options' }}
                     </mat-select-trigger>
-                    <mat-option *ngFor="let option of options" [value]="option.value">
+                    @for (option of options; track option) {
+                    <mat-option [value]="option.value">
                         <img src="{{ option.icon }}" class="icon-img">
                         {{ option.label }}
                     </mat-option>
+                    }
                 </mat-select>
             </mat-form-field>
 
@@ -85,13 +87,7 @@
 <app-travel-insurance-products></app-travel-insurance-products>
 <app-have-question></app-have-question>
 <app-submit-a-claim-banner></app-submit-a-claim-banner>
-<app-downloads-policy-doc></app-downloads-policy-doc> 
+<app-downloads-policy-doc></app-downloads-policy-doc>
 
 <!-- 
 -->
-
-
-
-
-
-

@@ -186,7 +186,7 @@
 
         &.mat-mdc-radio-checked {
             .mdc-form-field {
-                .mdc-label  {
+                .mdc-label {
                     background: $color-white;
                     border: solid 1px $color-gig-blue;
                     @include ssp-semibold;
@@ -197,41 +197,7 @@
         }
     }
 
-    // .mat-radio-button {
-    //     width: 100%;
-
-    //     .mat-radio-label {
-    //         text-align: center;
-    //         padding: 15px 18px;
-    //         border-radius: 3px;
-    //         color: $color-gig-black;
-    //         border: solid 1px $color-gray;
-    //         background: $color-white;
-    //         font-size: 16px;
-    //         cursor: pointer;
-    //         transition: all 0.5s;
-    //         display: block;
-    //         width: auto;
-    //         @include ssp-semibold;
-
-    //         @media #{$mobileAll} {
-    //             font-size: 14px;
-    //             padding: 11px;
-    //         }
-
-    //         .mat-radio-container {
-    //             display: none !important;
-    //         }
-    //     }
-
-    //     &.mat-radio-checked {
-    //         .mat-radio-label {
-    //             border: solid 1px $color-gig-blue;
-    //             @include ssp-semibold;
-    //             color: $color-gig-blue;
-    //         }
-    //     }
-    // }
+    
 }
 
 .cdk-overlay-pane {
@@ -269,89 +235,77 @@
 
 .multi-select-dd {
     width: 100%;
-
-    .mat-form-field-wrapper {
-        padding: 0;
-    }
-
-    .mat-form-field-underline,
-    .mat-select-arrow-wrapper {
+    .mdc-line-ripple,
+    .mat-mdc-select-arrow-wrapper {
         display: none;
     }
-
-    .mat-select {
-        margin-top: 2px;
-    }
-
-
-    .mat-select-value {
-        .ng-star-inserted {
-            @include ssp-semibold;
-            font-size: 16px;
-            padding-left: 70px;
-
-        }
-    }
-
-    .mat-form-field-label-wrapper {
-        left: 12px;
-        top: -5px;
+   
+    .place-holder {
         @include ssp-regular;
         font-size: 16px;
-
-        // .mat-select-placeholder{
-        // }
-        .mat-form-field-label {
-            color: $color-gig-black;
-            width: auto;
-            transform: none !important;
-            background: url('../../assets/images/icon-location.svg') no-repeat left;
-            padding-left: 25px;
-
+        color: $color-gig-black;
+        background: url('../../assets/images/icon-location.svg') no-repeat left;
+        padding-left: 25px;
+    }
+    .mat-mdc-text-field-wrapper {
+        background: $color-white !important;
+        border-radius: 4px !important;
+        border: solid 1px $color-gray !important;
+        .mat-mdc-select-trigger{
+            .mat-mdc-select-value{
+                .mat-mdc-select-placeholder {
+                    @include ssp-regular;
+                    font-size: 16px;
+                    color: $color-gig-black;
+                    background: url('../../assets/images/icon-location.svg') no-repeat left;
+                    padding-left: 25px;
+                }
+                .mat-mdc-select-value-text{
+                    @include ssp-semibold;
+                    font-size: 16px;
+                    color:$color-gig-black;
+                }
+            }
         }
     }
-
-    .mat-form-field-infix {
-        padding: 15px;
-        border-radius: 4px;
-        border: solid 1px $color-gray;
-    }
-
-    .mat-option-text {
-        display: flex;
-        align-items: center;
-    }
+  
 }
 
-.mat-select-panel-wrap {
-    .mat-select-panel {
-        width: 100%;
-        min-width: 100%;
-
-        .ms-filter {
-            border-radius: 4px;
-            background-color: #f4f6f8;
-            padding: 15px;
-            margin: 10px;
-            width: calc(100% - 50px);
+.mat-mdc-select-panel{
+    border-radius: 4px !important;
+    background: $color-white;
+    .ms-filter{
+        border-radius: 4px;
+        border: solid 1px $color-gray !important;
+        width: calc(100% - 35px);
+        @include ssp-regular;
+        font-size: 16px;
+        color:$color-gig-black;
+        margin:10px;
+        padding:5px;
+    }
+    .mat-mdc-option-multiple{
+        padding: 15px 0 15px 15px;
+        height: auto;
+        line-height: normal;
+        border-bottom: solid 1px #dddddd;
+        min-height: auto;
+        flex-direction:row-reverse;
+        background: $color-white !important;
+        .mdc-list-item__primary-text{
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            @include ssp-semibold;
+            font-size: 16px;
+            color: $color-gig-black;
         }
-
-        .mat-option {
-            padding: 15px;
-            height: auto;
-            line-height: normal;
-            border-bottom: solid 1px #dddddd;
-
-            .mat-pseudo-checkbox {
-                position: absolute;
-                right: 0;
-                border-radius: 3px;
-                border: solid 1px #d8d8d8;
-                width: 22px;
-                height: 22px;
-            }
-
-            .mat-pseudo-checkbox-checked {
+        .mat-pseudo-checkbox{
+            border-radius: 3px;
+            border: solid 1px #d8d8d8;
+            width: 22px;
+            height: 22px;
+            &.mat-pseudo-checkbox-checked {
                 &:after {
                     background: $color-white url("./../../assets/images/tick-blue.svg") no-repeat center;
                     height: 20px;
@@ -363,26 +317,16 @@
                     border: solid 1px #d8d8d8;
                 }
             }
+        }
 
-            .mat-option-text {
-                display: flex;
-                align-items: center;
-                @include ssp-semibold;
-                font-size: 16px;
-
-                img {
-                    margin-right: 10px;
-                }
-            }
-
-            &.mat-selected {
-                .mat-option-text {
-                    color: $color-gig-blue;
-                }
+        &.mdc-list-item--selected{
+            .mdc-list-item__primary-text{
+                color:$color-gig-blue !important;
             }
         }
     }
 }
+  
 
 .datepicker-travelers-section {
     margin: 10px 0;
