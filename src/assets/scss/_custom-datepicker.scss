@@ -1,0 +1,47 @@
+.daterangepicker {
+    @include ssp-regular;
+    // font-size: 16px;
+    .calendar-table {
+        th, td{
+            font-size: 14px;
+            @media #{$mobileAll} {
+                height: 40px;
+            }
+        }
+    }
+    @media #{$mobileAll} {
+        position: fixed;
+        top: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        width: 100%;
+
+        &:before,
+        &:after {
+            @media #{$mobileAll} {
+                display: none;
+
+            }
+        }
+        .drp-calendar {
+            @media #{$mobileAll} {
+                max-width: 100%;
+                
+            }
+        }
+
+    }
+    .drp-buttons{
+        font-size: 14px;
+        @include ssp-regular;
+        .drp-buttons{
+            @include ssp-regular;
+            font-size: 14px;
+
+        }
+    }
+}

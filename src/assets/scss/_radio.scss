@@ -1,0 +1,105 @@
+.traveling-options {
+    @include flexAlignCenterJustify;
+    column-gap: 15px;
+    @media #{$mobileAll} {
+        column-gap: 8px;
+    }
+
+    .to-radio {
+        display: block;
+        width: 50%;
+
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+
+            ~.checkmark {
+                display: block;
+                padding: 14px 5px;
+                border-radius: 3px;
+                border: solid 1px $color-gray;
+                background: $color-white;
+                font-size: 16px;
+                cursor: pointer;
+                transition: all 0.5s;
+                position: relative;
+                text-align: left;
+                img{
+                    margin-right: 5px;
+                }
+                @media #{$mobileAll} {
+                    font-size: 14px;
+                    padding: 10px 5px;
+
+                }
+
+                &:before {
+                    content: '';
+                    border-radius: 100%;
+                    border: solid 1px $color-gig-blue;
+                    background: $color-white;
+                    position: absolute;
+                    right: 5px;
+                    top: 5px;
+                    width: 13px;
+                    height: 13px;
+                    @media #{$mobileAll} {
+                        border: 0;
+                        background:transparent;
+                    }
+                }
+            }
+
+            &:checked {
+                ~.checkmark {
+                    border: solid 1px $color-gig-blue;
+                    @include ssp-bold;
+                    color: $color-gig-blue;
+
+                    &:before {
+                        content: '';
+                        border-radius: 100%;
+                        border: solid 1px $color-gig-blue;
+                        background: $color-gig-blue;
+                        position: absolute;
+                        right: 5px;
+                        top: 5px;
+                        width: 13px;
+                        height: 13px;
+                        @media #{$mobileAll} {
+                            border: 0;
+                            background:transparent;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        &.normal-radio {
+            input {
+                ~.checkmark {
+                    text-align: center;
+
+                    &:before {
+                        border: 0;
+                    }
+                }
+
+                &:checked {
+                    ~.checkmark {
+                        &:before {
+                            background: transparent;
+                            border: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}

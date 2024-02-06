@@ -1,0 +1,66 @@
+@import "../../../../assets/scss/config", '../../../../assets/scss/fonts', '../../../../assets/scss/variable', '../../../../assets/scss/mixin';
+
+
+.traveller-type-age-section{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    // padding-right: 20px;
+      
+    
+    .tta-head{
+        color: $color-black;
+        line-height: normal;
+         
+        .tta-type{
+            @include ssp-semibold;
+            font-size: 11px;
+        }
+        .tta-age{
+            @include ssp-regular;
+            font-size: 10px;
+        }
+    }
+
+    .mat-form-field{
+        @include ssp-regular;
+        .mat-form-field-wrapper{
+            padding-bottom: 0;
+            border:0;
+            .mat-form-field-flex {
+                .mat-form-field-infix{
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: auto;
+                    border: 0;
+                    .mat-input-element{
+                        text-align: center;
+                        @include ssp-regular;
+                        width: 50px;
+                    }
+                    .step-up, .step-down{
+                        padding:0;
+                        min-width: auto;
+                        background: transparent !important;
+                        .mat-ripple{
+                            display: none;
+                        }
+                        &:disabled{
+                            opacity: 0.5;
+                        }
+                        &:hover{
+                            background: transparent;
+                        }
+                    }
+                }
+
+            }
+            .mat-form-field-underline{
+                display: none;
+            }
+        }
+    }
+}

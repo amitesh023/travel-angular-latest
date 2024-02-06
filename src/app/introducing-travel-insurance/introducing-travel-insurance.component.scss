@@ -1,0 +1,66 @@
+@import "../../assets/scss/config", '../../assets/scss/fonts', '../../assets/scss/variable', '../../assets/scss/mixin';
+
+.intro-ti-section {
+    margin-bottom: 100px;
+
+    @media #{$mobileAll} {
+        margin: auto;
+    }
+
+    .container {
+        @include flexAlignCenterJustify;
+
+        @media #{$mobileAll} {
+            display: block;
+        }
+
+        .iti-pic {
+            img {
+                width: 535px;
+
+                @media #{$mobileAll} {
+                    width: 100%;
+                }
+            }
+        }
+
+        .iti-text-section {
+            margin-left: 35px;
+
+            @media #{$mobileAll} {
+                margin-left: auto;
+            }
+
+            h3 {
+                @include poppins-bold;
+                font-size: 36px;
+                margin-bottom: 20px;
+                letter-spacing: -1px;
+
+                @media #{$mobileAll} {
+                    font-size: 22px;
+                    margin: 20px 0;
+                }
+            }
+
+            p {
+                line-height: 22px;
+                color: $color-gig-black;
+                @include ssp-regular;
+                @media #{$mobileAll} {
+                    font-size: 16px;
+                }
+            }
+
+            .btn {
+                max-width: 180px;
+
+                @media #{$mobileAll} {
+                    max-width: 100%;
+                    font-size: 16px;
+                    @include ssp-semibold;
+                }
+            }
+        }
+    }
+}

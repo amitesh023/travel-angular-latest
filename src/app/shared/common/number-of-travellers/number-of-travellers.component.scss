@@ -1,0 +1,124 @@
+@import "../../../../assets/scss/config", '../../../../assets/scss/fonts', '../../../../assets/scss/variable', '../../../../assets/scss/mixin';
+
+.number-of-travellers-section {
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 15px 4px rgba(167, 167, 167, 0.1);
+    background-color: $color-white;
+    position: absolute;
+    z-index: 1;
+    width: calc(100% - 40px);
+    left: 0;
+    top: 55px;
+
+    &:after,
+    &:before {
+        bottom: 100%;
+        right: 15%;
+        border: solid transparent;
+        content: "";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    &:after {
+        border-color: rgba($color-black, 0);
+        border-bottom-color: $color-white;
+        border-width: 10px;
+        margin-left: -10px;
+    }
+
+    &:before {
+        border-color: rgba($color-black, 0);
+        border-bottom-color: rgba($color-black, 0.1) ;
+        border-width: 11px;
+        margin-left: -11px;
+    }
+
+    h2 {
+        @include ssp-bold;
+        font-size: 18px;
+        text-align: left;
+        color: $color-gig-black;
+    }
+
+    .travellers-count {
+        padding: 10px 18px;
+        background: #f4f6f8;
+        border-radius: 6px;
+        @include flexAlignCenterJustify;
+
+        app-number-incr-decre {
+            padding-right: 20px;
+            border-right: solid 1px $color-gray;
+
+            &:last-child {
+                border: 0;
+                padding-right: 0;
+            }
+        }
+
+    }
+
+    .btn-done-container {
+        border-top: solid 1px $color-gray;
+        text-align: right;
+        margin-top: 10px;
+
+        a {
+            @include ssp-semibold;
+            font-size: 12px;
+            padding: 0;
+            color: $color-gig-blue;
+            margin: 0;
+            min-width: auto;
+        }
+    }
+}
+
+.age-calculator-section {
+    margin-top: 20px;
+
+    h3 {
+        display: flex;
+        align-items: center;
+        @include ssp-regular;
+        color: $color-gig-blue;
+        font-size: 11px;
+        margin: 0 0 5px 0;
+        column-gap: 10px;
+        cursor: pointer;
+    }
+
+    .ac-content {
+        border-radius: 3px;
+        border: solid 0.5px $color-gray;
+        padding: 15px 35px;
+
+        label {
+            @include ssp-regular;
+            font-size: 12px;
+            color: $color-gig-black;
+        }
+
+        .input-with-cal-lnk {
+            @include flexAlignCenterJustify;
+            border-bottom: solid 1px $color-gray;
+            padding-bottom: 5px;
+
+            .mat-input-element {
+                @include ssp-regular;
+                font-size: 12px;
+                color: $color-gig-black;
+            }
+
+            .calculate-lnk {
+                @include ssp-regular;
+                font-size: 10px;
+                color: $color-gig-blue;
+            }
+        }
+    }
+}

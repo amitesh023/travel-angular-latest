@@ -1,0 +1,42 @@
+@import "../../../assets/scss/config", "../../../assets/scss/fonts", "../../../assets/scss/variable", "../../../assets/scss/mixin";
+
+
+header{
+    box-shadow: 0 2px 4px 0 rgba($color-black, 0.12);
+    background:$color-white;
+    z-index: 1;
+    position: relative;
+    .container{
+        @include flexAlignCenterJustify;
+        padding-top: 17px ;
+        padding-bottom: 17px;
+        @media #{$mobileAll} {
+            padding-top: 19px;
+            padding-bottom: 19px;
+        }
+        .call-us-section{
+            .cu-text{
+                @include ssp-semibold;
+                color: $color-carbon-black;
+                @media #{$mobileAll} {
+                    display: none;
+                }
+            }
+            .cs-link{
+                margin-left: 5px;
+                color: $color-gig-blue;
+                @include ssp-bold;
+                background: url('../../../assets/images/icon-phone-ring.svg') no-repeat left center;
+                padding-left: 20px;
+                @media #{$mobileAll} {
+                    background-size: 80%;
+                }
+                 .cs-text{
+                    @media #{$mobileAll} {
+                        display: none;
+                    }
+                 }
+            }
+        }
+    }
+}

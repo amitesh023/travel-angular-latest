@@ -1,0 +1,31 @@
+<div class="number-of-travellers-section">
+    <h2>Number of travellers</h2>
+    <div class="travellers-count">
+        <app-number-incr-decre [travellerType]="'Adults'" [ageRange]="'16 to 64'"></app-number-incr-decre>
+        <app-number-incr-decre [travellerType]="'Children'" [ageRange]="'Under 16'"></app-number-incr-decre>
+        <app-number-incr-decre [travellerType]="'Seniors'" [ageRange]="'65 to 69'"></app-number-incr-decre>
+    </div>
+
+    <div class="age-calculator-section">
+        <h3 (click)="toggleDOBCal()">
+            <img src="../../../../assets/images/icon-calender.svg"> Age calculator
+        </h3>
+        <div class="ac-content" *ngIf="showDOBComponent">
+            <label>
+                Date of Birth (DD/MM/YYYY)
+            </label>
+            <div class="input-with-cal-lnk">
+                <input [(ngModel)]="_dobValue" matInput type="text" />
+                <a mat-button class="calculate-lnk" routerLink=".">Calculate</a>
+            </div>
+
+            <div class="info-green"> <span class="ssp-bold color-gig-blue"> An adult </span> as of the day of departure
+                on your specified trip date </div>
+
+        </div>
+    </div>
+
+    <div class="btn-done-container">
+        <a mat-button (click)="hideComponent()" >Done</a>
+    </div>
+</div>

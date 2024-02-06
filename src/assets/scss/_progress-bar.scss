@@ -1,0 +1,27 @@
+.progress-bars{
+    margin-top: 80px;
+    @include flexAlignCenterJustify;
+    justify-content: center;
+    column-gap: 15px;
+    @media #{$mobileAll} {
+        margin-top: 30px;
+    }
+    .pb-item{
+        border-bottom: solid 4px #bababa;
+        padding-bottom: 5px;
+        width: 35px;
+        @include ssp-semibold;
+        font-size: 16px;
+        color: #bababa;
+        &.active{
+            border-bottom: solid 4px $color-gig-blue;
+            width: 185px;
+            color: $color-gig-blue;
+        }
+        &.completed{
+            border-bottom: solid 4px $color-gig-blue;
+            color: $color-gig-blue;
+        }
+        
+    }
+}

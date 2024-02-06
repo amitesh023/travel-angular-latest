@@ -1,0 +1,493 @@
+@import "../../assets/scss/config", '../../assets/scss/fonts', '../../assets/scss/variable', '../../assets/scss/mixin';
+
+.banner-travel-section {
+    background: url('../../assets/images/pic-head-background.jpg') no-repeat top left;
+    background-size: contain;
+    padding: 30px 0;
+    position: relative;
+
+    @media #{$mobileAll} {
+        background-size: cover;
+    }
+
+    .container {
+        min-height: 621px;
+        @include flexAlignCenterJustify;
+
+        @media #{$mobileAll} {
+            display: block;
+        }
+    }
+
+    .banner-title-section {
+        h1 {
+            @include poppins-bold;
+            color: $color-gig-black;
+            width: 490px;
+            font-size: 42px;
+            line-height: 50px;
+
+            @media #{$mobileAll} {
+                width: auto;
+                font-size: 36px;
+            }
+        }
+
+        p {
+            @include ssp-semibold;
+            font-size: 16px;
+
+            @media #{$mobileAll} {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .banner-form-section {
+        padding: 30px 24px;
+        border-radius: 4px;
+        box-shadow: 0 7px 15px 0 rgba(167, 167, 167, 0.1);
+        border: solid 1px #eaeaea;
+        background: $color-white;
+        width: 530px;
+
+        @media #{$mobileAll} {
+            width: auto;
+            padding: 20px;
+
+        }
+
+        h2 {
+            @include poppins-bold;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+
+            @media #{$mobileAll} {
+                font-size: 18px;
+
+            }
+        }
+    }
+}
+
+
+.trip-option-radio {
+    border-radius: 4px;
+    background: $color-gray;
+    @include flexAlignCenterJustify;
+    justify-content: flex-start;
+    padding: 5px;
+
+    .mat-mdc-radio-button {
+        @include flexAlignCenterJustify;
+        justify-content: center;
+        transition: all 0.2s;
+        position: relative;
+        text-align: center;
+        width: 100%;
+
+        .mdc-form-field {
+            width: 100%;
+            text-align: center;
+
+            .mdc-radio {
+                display: none !important;
+            }
+
+            .mdc-label {
+                @include flexAlignCenterJustify;
+                justify-content: center;
+                @include poppins-semi-bold;
+                font-size: 16px;
+                color: $color-gig-black;
+                cursor: pointer;
+                padding: 10px;
+                width: 100%;
+
+                .chip-discount {
+                    border-radius: 10px;
+                    background: linear-gradient(90deg, rgb(46, 46, 133) 0%, rgb(0, 136, 226) 100%);
+                    @include poppins-semi-bold;
+                    font-size: 10px;
+                    color: $color-white;
+                    position: absolute;
+                    padding: 1px 10px;
+                    top: -15px;
+                }
+
+                img {
+                    margin-left: 10px;
+                }
+            }
+
+        }
+
+        &.mat-mdc-radio-checked {
+            @include poppins-bold;
+            color: $color-gig-blue;
+            background: $color-white;
+            border-radius: 3px;
+            box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.07);
+        }
+
+    }
+
+
+}
+
+.to-from-traveling-radio {
+    @include flexAlignCenterJustify;
+    column-gap: 15px;
+    padding: 0;
+
+    @media #{$mobileAll} {
+        column-gap: 8px;
+    }
+
+    .mat-mdc-radio-button {
+        @include flexAlignCenterJustify;
+        justify-content: center;
+        transition: all 0.2s;
+        position: relative;
+        text-align: center;
+        width: 100%;
+
+        .mdc-form-field {
+            width: 100%;
+            text-align: center;
+
+            .mdc-radio {
+                display: none !important;
+            }
+
+            .mdc-label {
+                text-align: center;
+                padding: 15px 18px;
+                border-radius: 3px;
+                color: $color-gig-black;
+                border: solid 1px $color-gray;
+                background: $color-white;
+                font-size: 16px;
+                cursor: pointer;
+                transition: all 0.5s;
+                display: block;
+                width: auto;
+                @include ssp-semibold;
+                width: 100%;
+
+                @media #{$mobileAll} {
+                    font-size: 14px;
+                    padding: 11px;
+                }
+            }
+
+        }
+
+        &.mat-mdc-radio-checked {
+            .mdc-form-field {
+                .mdc-label  {
+                    background: $color-white;
+                    border: solid 1px $color-gig-blue;
+                    @include ssp-semibold;
+                    color: $color-gig-blue;
+                }
+            }
+
+        }
+    }
+
+    // .mat-radio-button {
+    //     width: 100%;
+
+    //     .mat-radio-label {
+    //         text-align: center;
+    //         padding: 15px 18px;
+    //         border-radius: 3px;
+    //         color: $color-gig-black;
+    //         border: solid 1px $color-gray;
+    //         background: $color-white;
+    //         font-size: 16px;
+    //         cursor: pointer;
+    //         transition: all 0.5s;
+    //         display: block;
+    //         width: auto;
+    //         @include ssp-semibold;
+
+    //         @media #{$mobileAll} {
+    //             font-size: 14px;
+    //             padding: 11px;
+    //         }
+
+    //         .mat-radio-container {
+    //             display: none !important;
+    //         }
+    //     }
+
+    //     &.mat-radio-checked {
+    //         .mat-radio-label {
+    //             border: solid 1px $color-gig-blue;
+    //             @include ssp-semibold;
+    //             color: $color-gig-blue;
+    //         }
+    //     }
+    // }
+}
+
+.cdk-overlay-pane {
+    transform: none !important;
+
+    .mat-select-panel-wrap {
+        .mat-select-panel {
+            max-width: none !important;
+            min-width: 100% !important;
+        }
+
+    }
+}
+
+.range-dp-dep-retrun {
+    padding: 15px 15px 15px 35px;
+    border-radius: 4px;
+    border: solid 1px $color-gray;
+    background: $color-white url('../../assets/images/icon-calender-range.svg') no-repeat left;
+    @include ssp-regular;
+    font-size: 16px;
+    color: $color-gig-black;
+    width: calc(100% - 50px);
+
+    &::placeholder {
+        color: $color-gig-black;
+    }
+
+    &:focus,
+    &:visited,
+    &:hover {
+        border: solid 1px $color-gig-blue;
+    }
+}
+
+.multi-select-dd {
+    width: 100%;
+
+    .mat-form-field-wrapper {
+        padding: 0;
+    }
+
+    .mat-form-field-underline,
+    .mat-select-arrow-wrapper {
+        display: none;
+    }
+
+    .mat-select {
+        margin-top: 2px;
+    }
+
+
+    .mat-select-value {
+        .ng-star-inserted {
+            @include ssp-semibold;
+            font-size: 16px;
+            padding-left: 70px;
+
+        }
+    }
+
+    .mat-form-field-label-wrapper {
+        left: 12px;
+        top: -5px;
+        @include ssp-regular;
+        font-size: 16px;
+
+        // .mat-select-placeholder{
+        // }
+        .mat-form-field-label {
+            color: $color-gig-black;
+            width: auto;
+            transform: none !important;
+            background: url('../../assets/images/icon-location.svg') no-repeat left;
+            padding-left: 25px;
+
+        }
+    }
+
+    .mat-form-field-infix {
+        padding: 15px;
+        border-radius: 4px;
+        border: solid 1px $color-gray;
+    }
+
+    .mat-option-text {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.mat-select-panel-wrap {
+    .mat-select-panel {
+        width: 100%;
+        min-width: 100%;
+
+        .ms-filter {
+            border-radius: 4px;
+            background-color: #f4f6f8;
+            padding: 15px;
+            margin: 10px;
+            width: calc(100% - 50px);
+        }
+
+        .mat-option {
+            padding: 15px;
+            height: auto;
+            line-height: normal;
+            border-bottom: solid 1px #dddddd;
+
+            .mat-pseudo-checkbox {
+                position: absolute;
+                right: 0;
+                border-radius: 3px;
+                border: solid 1px #d8d8d8;
+                width: 22px;
+                height: 22px;
+            }
+
+            .mat-pseudo-checkbox-checked {
+                &:after {
+                    background: $color-white url("./../../assets/images/tick-blue.svg") no-repeat center;
+                    height: 20px;
+                    width: 20px;
+                    transform: none;
+                    top: -1px;
+                    left: -1px;
+                    border-radius: 4px;
+                    border: solid 1px #d8d8d8;
+                }
+            }
+
+            .mat-option-text {
+                display: flex;
+                align-items: center;
+                @include ssp-semibold;
+                font-size: 16px;
+
+                img {
+                    margin-right: 10px;
+                }
+            }
+
+            &.mat-selected {
+                .mat-option-text {
+                    color: $color-gig-blue;
+                }
+            }
+        }
+    }
+}
+
+.datepicker-travelers-section {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 15px;
+    position: relative;
+
+    .dp-travlers-item {
+        width: 100%;
+    }
+
+    .md-drppicker {
+        @include ssp-regular;
+        font-size: 12px;
+        color: $color-gig-black;
+
+        &.double {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        table {
+            border-spacing: 0;
+
+            th {
+                color: $color-gig-black;
+                @include ssp-semibold;
+            }
+
+            td {
+                margin: 0;
+                color: $color-gig-black;
+
+                &.active {
+                    background: $color-gig-blue;
+                    color: $color-white;
+
+                    &:hover {
+                        background: $color-gig-blue;
+                        color: $color-white;
+                    }
+                }
+
+            }
+        }
+
+        .buttons {
+            padding: 9.5px 14.7px 9.6px 21.7px;
+            border-radius: 4px;
+            background-color: #f4f6f8;
+            width: 100%;
+            text-align: right;
+        }
+
+        .buttons_input {
+            width: fit-content;
+
+            .btn {
+                background: $color-gig-blue;
+                @include ssp-semibold;
+                font-size: 16px;
+                letter-spacing: normal;
+                box-shadow: none;
+                padding: 5px 19px;
+                border-radius: 4px;
+                width: fit-content;
+                line-height: normal;
+
+                &:hover {
+                    background: $color-gig-blue;
+                }
+            }
+        }
+
+    }
+}
+
+.been-here {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-size: 16px;
+    @include ssp-regular;
+
+    a {
+        @include ssp-bold;
+        color: $color-gig-blue;
+        cursor: pointer;
+    }
+}
+
+
+.travellers-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 4px;
+    border: solid 1px $color-gray;
+    background-color: $color-white;
+    padding: 6.5px 8px;
+    cursor: pointer;
+}

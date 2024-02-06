@@ -1,0 +1,57 @@
+@import "../../assets/scss/config", '../../assets/scss/fonts', '../../assets/scss/variable', '../../assets/scss/mixin';
+
+.faq-section {
+    margin-top: 60px;
+
+    .container {
+        h3 {
+            @include poppins-bold;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+
+            @media #{$mobileAll} {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .accordion {
+            .accordion-item {
+                border: 0;
+                padding: 0;
+                border-bottom: solid 1px $color-gray ;
+                box-shadow: none;
+                margin: 0;
+                .accordion-header {
+                    @include poppins-semi-bold;
+                    font-size: 14px;
+                    padding: 25px;
+                    cursor: pointer;
+                    position: relative;
+                    height: auto;
+                    border-radius: 0;
+                    background: transparent;
+
+                    @media #{$mobileAll} {
+                        font-size: 16px;
+                        padding: 20px 10px 20px 0 ;
+                    }
+                    .mat-expansion-indicator{
+                        &:after{
+                            color: $color-gig-blue;
+                        }
+                    }
+                }
+
+                .accordion-body {
+                    padding: 0 ;
+                    @include ssp-regular;
+                    @media #{$mobileAll} {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

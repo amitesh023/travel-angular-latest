@@ -1,0 +1,45 @@
+@import "../../assets/scss/config", '../../assets/scss/fonts', '../../assets/scss/variable', '../../assets/scss/mixin';
+
+.why-choose-section {
+    margin: 50px 0;
+
+    @media #{$mobileAll} {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        @include poppins-bold;
+        font-size: 20px;
+        color: $color-gig-black;
+        margin-bottom: 40px;
+        text-align: center
+    }
+
+    .wcs-items {
+        @include flexAlignCenterJustify;
+        text-align: center;
+
+        @media #{$mobileAll} {
+            display: block;
+        }
+
+        .wcs-item {
+            @media #{$mobileAll} {
+                margin-bottom: 40px;
+            }
+
+            h3 {
+                @include poppins-semi-bold;
+                font-size: 18px;
+                color: $color-gig-black;
+                margin-top: 15px;
+            }
+
+            p {
+                font-size: 16px;
+                margin-top: 10px;
+                @include ssp-regular;
+            }
+        }
+    }
+}

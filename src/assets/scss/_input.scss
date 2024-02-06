@@ -1,0 +1,174 @@
+input,
+textarea {
+  resize: none;
+
+  &.input {
+    background: #fcfcfc;
+    border: solid 1px $color-gray;
+    color: $color-gig-black;
+    @include ssp-regular;
+    font-size: 14px;
+    padding: 8.5px;
+    border-radius: 4px;
+    width: 100%;
+
+    @media #{$mobileAll} {
+      padding: 12px 8.5px;
+      font-size: 16px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-visible {
+      border: solid 1px $color-gig-blue;
+      background: $color-white;
+      border-radius: 4px;
+      box-shadow: none;
+      outline: none !important;
+      color: $color-gig-black;
+    }
+  }
+
+  &.date-picker {
+    background: $color-gray url("#{$file-path}/icon-calendar.svg") no-repeat 97%;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-visible {
+      background: $color-gray url("#{$file-path}/icon-calendar.svg") no-repeat 97%;
+    }
+  }
+}
+
+
+::placeholder {
+  color: $color-light-black;
+}
+
+.error-msg {
+  font-size: 12px;
+  color: $color-red;
+}
+
+.error {
+  border: solid 1px $color-red;
+  border-radius: 4px;
+
+  input {
+    border: 0 !important;
+  }
+}
+
+
+
+.number-input {
+  display: flex;
+  align-items: center;
+
+  a {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    @media #{$mobileAll} {
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+    }
+
+    &.step-up {
+      background: url("#{$file-path}/icon-plus.svg") no-repeat 50%;
+
+      @media #{$mobileAll} {
+        background: $color-white url("#{$file-path}/icon-plus.svg") no-repeat 50%;
+      }
+    }
+
+    &.step-down {
+      background: url("#{$file-path}/icon-minus.svg") no-repeat 50%;
+
+      @media #{$mobileAll} {
+        background: $color-white url("#{$file-path}/icon-minus.svg") no-repeat 50%;
+      }
+    }
+  }
+
+  input[type="number"] {
+    font-size: 14px;
+    @include ssp-regular;
+    width: 45%;
+    height: 40px;
+    text-align: center;
+    background: transparent;
+    color: $color-gig-black;
+    border-radius: 0;
+    border: 0;
+    border-left: 0;
+    border-right: 0;
+    outline: 0;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+    @media #{$mobileAll} {
+      font-size: 16px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-gig-black;
+      outline: 0;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+}
+
+.form-input {
+  margin-bottom: 15px;
+
+  .input-label {
+    margin-bottom: 10px;
+  }
+}
+
+.tel-input {
+  display: flex;
+  background: #fcfcfc;
+  border: solid 1px $color-gray;
+  border-radius: 4px;
+  overflow: hidden;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
+    border: solid 1px $color-gig-blue;
+    background: $color-white;
+    border-radius: 4px;
+  }
+
+  input {
+    border: 0;
+    background: transparent;
+    outline: 0;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border: 0;
+      background: transparent;
+    }
+  }
+
+  .country-code {
+    width: 50px;
+    text-align: center;
+  }
+
+}

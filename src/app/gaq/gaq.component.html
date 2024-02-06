@@ -1,0 +1,97 @@
+<div class="banner-travel-section">
+    <div class="container">
+        <div class="banner-title-section">
+            <h1>Get the best Travel Insurance in 2 minutes</h1>
+            <p>Choose GIG Gulf travel insurance and relax and enjoy your vacation!</p>
+        </div>
+        <div class="banner-form-section">
+            <h2>Where is your next journey?</h2>
+            <mat-radio-group aria-label="Select an option" class="trip-option-radio">
+                <mat-radio-button value="Single Trip" checked>
+                    Single Trip <img src="/assets/images/icon-small-plane.svg" alt="Single Trip" />
+                </mat-radio-button>
+                <mat-radio-button value="Annual Trip">
+                    <span class="chip-discount">
+                        10% Discount
+                    </span>
+                    Annual Trip <img src="/assets/images/icon-calender.svg" alt="Annual Trip" />
+                </mat-radio-button>
+            </mat-radio-group>
+            <div class="hint m-top-bot-10">
+                This covers your single international trip with multiple destinations
+            </div>
+
+            <mat-radio-group aria-label="Select an option" class="to-from-traveling-radio">
+                <mat-radio-button value="1" checked class="to-radio">
+                    Travelling from UAE
+                </mat-radio-button>
+                <mat-radio-button value="2" class="to-radio">
+                    Travelling to UAE
+                </mat-radio-button>
+            </mat-radio-group>
+
+            <div class="info-green">
+                Only offered for residents and nationals of UAE
+            </div>
+
+            <mat-form-field class="multi-select-dd">
+                <!-- <mat-label> <img src="../../assets/images/icon-location.svg" alt=""> I’m travelling to</mat-label> -->
+                <mat-select [(ngModel)]="selectedOptions" multiple [disableOptionCentering]="true" mat-select-filter
+                    placeholder="I’m travelling to">
+                    <input type="text" class="ms-filter" autocomplete="off" matInput placeholder="Search"
+                        #multiSelectSearch (input)="onInputChange()">
+                    <mat-select-trigger>
+                        {{ selectedOptions.length ? selectedOptions.join(', ') : 'Select Options' }}
+                    </mat-select-trigger>
+                    <mat-option *ngFor="let option of options" [value]="option.value">
+                        <img src="{{ option.icon }}" class="icon-img">
+                        {{ option.label }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+            <div class="datepicker-travelers-section">
+                <div class="dp-travlers-item">
+                    <!-- <input type="text" placeholder="Departing  -  Returning" ngxDaterangepickerMd [(ngModel)]="selected"
+                        class="range-dp-dep-retrun" /> -->
+                </div>
+                <div class="dp-travlers-item travellers-section" (click)="toggleComponent()">
+                    <img src="../../assets/images/icon-people.svg" alt=""> Travellers
+                </div>
+                <!-- <app-number-of-travellers *ngIf="showComponent"></app-number-of-travellers> -->
+            </div>
+
+            <button mat-flat-button class="btn btn-dark-blue active">
+                Next
+                <img src="../../assets/images/icon-arrow-right-white.svg" alt="">
+
+            </button>
+            <div class=" m-top-bot-10">
+                <button mat-flat-button class="btn btn-dark-blue btn-border active ">
+                    HELP ME GET A PLAN
+                </button>
+            </div>
+            <div class="been-here">
+                Been here before? <a class="ssp-bold"> Retrieve your quote</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<app-why-choose></app-why-choose>
+<app-introducing-travel-insurance></app-introducing-travel-insurance>
+<app-travel-insurance-products></app-travel-insurance-products>
+<app-have-question></app-have-question>
+<app-submit-a-claim-banner></app-submit-a-claim-banner>
+<app-downloads-policy-doc></app-downloads-policy-doc> 
+
+<!-- 
+-->
+
+
+
+
+
+
