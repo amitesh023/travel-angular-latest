@@ -1,0 +1,35 @@
+<div class="what-customers-say-section">
+    <div class="container">
+
+        <div class="wcs-ekomi">
+            <h3>What our customers are saying...</h3>
+            <p>At GIG Gulf, we pride ourselves on our exceptional customer service, and always strive to provide a
+                great experience.</p>
+        </div>
+        <div class="wcs-slider-section">
+            <div class="wcs-slider">
+                <owl-carousel-o [options]="customOptions">
+                    @for (slide of dynamicSlides; track slide) {
+                    <ng-container >
+                        <ng-template  carouselSlide >
+                            <div class="wcs-item">
+                                <div class="quote">“</div>
+                                <h3>
+                                    {{slide.title}}
+                                </h3>
+                                
+                                <div class="traveler-name-pic">
+                                    <div class="tnp-pic">
+                                        <img src={{slide.src}} alt="Happy Traveler">
+                                    </div>
+                                    <span class="tnp-name">{{slide.name}}</span>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ng-container>
+                    }
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</div>

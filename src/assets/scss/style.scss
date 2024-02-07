@@ -1,10 +1,10 @@
 @import "config", "fonts", "variable", "mixin";
 @import "input", "button", "radio";
 @import "header", "footer", "common", "progress-bar", "custom-datepicker";
-
- 
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 .container {
-    width: 100%;
+    // width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;

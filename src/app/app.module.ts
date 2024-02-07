@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
 //Material Imports
@@ -17,6 +18,8 @@ import { MatButtonModule } from '@angular/material/button';
 
 //Date range picker
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +34,7 @@ import { TravelInsuranceProductsComponent } from './travel-insurance-products/tr
 import { SubmitAClaimBannerComponent } from './submit-a-claim-banner/submit-a-claim-banner.component';
 import { HaveQuestionComponent } from './have-question/have-question.component';
 import { DownloadsPolicyDocComponent } from './downloads-policy-doc/downloads-policy-doc.component';
+import { CustomerCommentsComponent } from './gaq/customer-comments/customer-comments.component';
 
 
 @NgModule({
@@ -44,12 +48,14 @@ import { DownloadsPolicyDocComponent } from './downloads-policy-doc/downloads-po
     TravelInsuranceProductsComponent,
     SubmitAClaimBannerComponent,
     HaveQuestionComponent,
-    DownloadsPolicyDocComponent
+    DownloadsPolicyDocComponent,
+    CustomerCommentsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
     // Date range picker
     NgxDaterangepickerMd.forRoot({
       separator: ' - ',
@@ -59,6 +65,9 @@ import { DownloadsPolicyDocComponent } from './downloads-policy-doc/downloads-po
       cancelLabel: 'Cancel', // detault is 'Cancel'
       clearLabel: 'Clear', // detault is 'Clear'
     }),
+
+    //for carousal 
+    CarouselModule,
 
     //Material
     MatTabsModule,
