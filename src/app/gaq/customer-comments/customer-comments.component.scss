@@ -1,0 +1,141 @@
+@import "../../../assets/scss/config", '../../../assets/scss/fonts', '../../../assets/scss/variable', '../../../assets/scss/mixin';
+
+.what-customers-say-section {
+    margin-top: 100px;
+    background: linear-gradient(90deg, rgba($color-gig-blue, 1) 0%, rgba($color-gig-blue, 1) 50%, rgba(219, 221, 220, 0.1) 50%, rgba(219, 221, 220, 0.1) 100%);
+
+    @media #{$mobileAll} {
+        background: $color-gig-blue;
+        margin-top: 60px;
+    }
+
+    .container {
+        @include flexAlignCenterJustify;
+        justify-content: center;
+
+        @media #{$mobileAll} {
+            display: block;
+            padding: 0;
+        }
+
+        .wcs-ekomi {
+            color: $color-white;
+            background: $color-gig-blue url("../../../assets/images/gig-grapic-blue.svg") no-repeat right;
+            width: 50%;
+            padding: 100px 100px 100px 0;
+            margin-right: 1px;
+            @media #{$mobileAll} {
+                padding: 60px 20px;
+                width: auto;
+
+            }
+
+            h3 {
+                @include poppins-bold;
+                font-size: 36px;
+                letter-spacing: -1px;
+                line-height: normal;
+
+                @media #{$mobileAll} {
+                    font-size: 22px;
+                    letter-spacing: normal;
+                }
+            }
+
+            p {
+                line-height: 22px;
+                margin-top: 15px;
+
+                @media #{$mobileAll} {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .wcs-slider-section {
+            width: 50%;
+            @media #{$mobileAll} {
+                background: #f4f6f8;
+                width: auto;
+                padding: 20px;
+            }
+
+            .wcs-slider {
+                padding-left: 75px;
+                // width: 100%;
+                @media #{$mobileAll} {
+                    padding: 0;
+                }
+                .owl-item {
+                    padding:0;
+                    .quote {
+                        @include ssp-bold;
+                        font-size: 100px;
+                        opacity: 0.1;
+                        line-height: normal;
+                    }
+
+                    h3 {
+                        @include poppins-bold;
+                        font-size: 24px;
+                        margin-bottom: 30px;
+
+                        @media #{$mobileAll} {
+                            font-size: 20px;
+                        }
+                    }
+
+                    p {
+                        font-size: 16px
+                    }
+
+                    .traveler-name-pic {
+                        @include flexAlignCenterJustify;
+                        justify-content: flex-start;
+                        column-gap: 15px;
+
+                        .tnp-name {
+                            @include ssp-semibold;
+
+                            @media #{$mobileAll} {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .owl-theme{
+                .owl-nav {
+                    display: flex;
+                    column-gap: 10px;
+                    margin-top: 75px;
+                    padding-bottom: 40px;
+                    @media #{$mobileAll} {
+                        margin-top: 20px;
+                    }
+    
+                    .owl-prev, .owl-next {
+                        padding: 17px;
+                        width: auto;
+                        height: auto;
+                        border-radius: 3px;
+                        border: solid 1px $color-gig-blue;
+
+                        @media #{$mobileAll} {
+                            padding: 16.5px 18.5px;
+                            border: 1px solid $color-gig-blue;
+                        }
+                        &.owl-prev{
+                            background: url('../../../assets/images/icon-back-arrow.svg') no-repeat center;
+                        }
+                        &.owl-next{
+                            background: url('../../../assets/images//icon-next-arrow.svg') no-repeat center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
