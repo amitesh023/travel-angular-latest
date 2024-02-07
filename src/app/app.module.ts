@@ -35,6 +35,7 @@ import { SubmitAClaimBannerComponent } from './submit-a-claim-banner/submit-a-cl
 import { HaveQuestionComponent } from './have-question/have-question.component';
 import { DownloadsPolicyDocComponent } from './downloads-policy-doc/downloads-policy-doc.component';
 import { CustomerCommentsComponent } from './gaq/customer-comments/customer-comments.component';
+import { SearchBoxPipe } from './shared/pipes/search-box.pipe';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { CustomerCommentsComponent } from './gaq/customer-comments/customer-comm
     SubmitAClaimBannerComponent,
     HaveQuestionComponent,
     DownloadsPolicyDocComponent,
+    SearchBoxPipe,
     CustomerCommentsComponent
   ],
   imports: [
@@ -66,7 +68,7 @@ import { CustomerCommentsComponent } from './gaq/customer-comments/customer-comm
       clearLabel: 'Clear', // detault is 'Clear'
     }),
 
-    //for carousal 
+    //for carousal
     CarouselModule,
 
     //Material
