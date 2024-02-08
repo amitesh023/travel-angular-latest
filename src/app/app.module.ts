@@ -64,8 +64,6 @@ import { SearchBoxPipe } from './shared/pipes/search-box.pipe';
       applyLabel: 'Select',
       format: 'DD/MM/YYYY', // could be 'YYYY-MM-DDTHH:mm:ss.SSSSZ'
       displayFormat: 'DD/MM/YYYY', // default is format value
-      cancelLabel: 'Cancel', // detault is 'Cancel'
-      clearLabel: 'Clear', // detault is 'Clear'
     }),
 
     //for carousal
