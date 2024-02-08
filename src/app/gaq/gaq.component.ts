@@ -1,24 +1,16 @@
 import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-
-import * as dayjs from 'dayjs';
-
 @Component({
   selector: 'app-gaq',
   templateUrl: './gaq.component.html',
   styleUrls: ['./gaq.component.scss'],
   encapsulation: ViewEncapsulation.None  // Disable encapsulation
-
 })
 export class GaqComponent implements OnInit {
   showComponent: boolean = false;
   destinationSearchBoxTxt: string = '';
-  // selected: { startDate: dayjs.Dayjs, endDate: dayjs.Dayjs, };
-  constructor() {
-    // this.selected = {
-    //   startDate: dayjs().format('YYYY-MM-DD'), // You can initialize it with the current date or any other default value
-    //   endDate: dayjs().format('YYYY-MM-DD'),
-    // };
+  selected: any;
 
+  constructor() {
   }
 
   @ViewChild('multiSelectSearch') multiSelectSearchInput: ElementRef | undefined;
